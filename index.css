@@ -1,0 +1,24 @@
+:root {
+    --body-color: rgba(10,25,47,1);
+    --font-color: rgba(255,255,255,0.8);
+}
+.body-main{
+  background: var(--body-color);
+  color: var(--font-color);
+}
+
+/* Styling for both screen display and printing */
+hr.page-splitter {
+  border-top: 1px solid #00F; /* Visual line style */
+  margin: 20px 0;
+}
+
+section.header-info {
+  border-top: 1px solid #F00; /* Visual line style */
+  margin: 20px 0;
+}
+
+section.short-bio {
+  border-top: 3px solid #0F0; /* Visual line style */
+  margin: 20px 0;
+}
