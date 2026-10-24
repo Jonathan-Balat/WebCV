@@ -1,24 +1,45 @@
 :root {
     --body-color: rgba(10,25,47,1);
     --font-color: rgba(255,255,255,0.8);
-}
-.body-main{
-  background: var(--body-color);
-  color: var(--font-color);
+    --subheader-color: rgba(118, 145, 201, 1);
 }
 
 /* Styling for both screen display and printing */
 hr.page-splitter {
   border-top: 1px solid #00F; /* Visual line style */
-  margin: 20px 0;
+  margin: 5px 5px 5px 5px; /* T R D L */
 }
 
-section.header-info {
-  border-top: 1px solid #F00; /* Visual line style */
-  margin: 20px 0;
+.body-main{
+  background: var(--body-color);
+  color: var(--font-color);
 }
 
-section.short-bio {
-  border-top: 3px solid #0F0; /* Visual line style */
-  margin: 20px 0;
+div.generic{
+    margin: 5px;
+}
+
+div.header-info {
+  margin: 20px;
+}
+
+div.short-bio {
+  /*border-top: 3px solid #0F0; */
+  margin: 5px;
+}
+
+section.details {
+  margin: 10px;
+}
+
+div.subheader {
+  color: var(--subheader-color);
+}
+
+div.skills-layout{
+    layout: grid;
+}
+
+table.tech-expertise-table{
+  column: 3;
 }
