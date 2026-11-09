@@ -1,45 +1,50 @@
-:root {
-    --body-color: rgba(10,25,47,1);
-    --font-color: rgba(255,255,255,0.8);
-    --subheader-color: rgba(118, 145, 201, 1);
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    font-family: 'Arial Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Styling for both screen display and printing */
-hr.page-splitter {
-  border-top: 1px solid #00F; /* Visual line style */
-  margin: 5px 5px 5px 5px; /* T R D L */
+/* Tape that goes across the screen */
+.tape-container {
+    width: 100%;
+    background-color: #f1c40f;
+    border-top: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    position: relative;
+    padding: 15px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform: rotate(-3deg) scale(1.5);
 }
 
-.body-main{
-  background: var(--body-color);
-  color: var(--font-color);
+/* Animation for Tape */
+.tape-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
 }
 
-div.generic{
-    margin: 5px;
+/* Text within the Tape */
+.tape-text {
+    font-size: 2rem;
+    color: #000000000;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding-right: 25px;
 }
 
-div.header-info {
-  margin: 20px;
-}
-
-div.short-bio {
-  /*border-top: 3px solid #0F0; */
-  margin: 5px;
-}
-
-section.details {
-  margin: 10px;
-}
-
-div.subheader {
-  color: var(--subheader-color);
-}
-
-div.skills-layout{
-    layout: grid;
-}
-
-table.tech-expertise-table{
-  column: 3;
+/* Animation styling */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        /* Move half of track */
+        transform: translateX(-50%);
+    }
 }
